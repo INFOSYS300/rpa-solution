@@ -1,9 +1,9 @@
 {
   "name": "MovieDatabaseProcess",
   "description": "",
-  "main": "Main.xaml",
+  "main": "DirectorInformation.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.11.4]",
+    "UiPath.Excel.Activities": "[2.16.0]",
     "UiPath.Mail.Activities": "[1.12.3]",
     "UiPath.System.Activities": "[21.10.5]",
     "UiPath.UIAutomation.Activities": "[21.10.6]"
