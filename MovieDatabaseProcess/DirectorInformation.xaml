@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DirectorInformation" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1225,14945" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:sc1="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DirectorInformation" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1225,15007" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:sc1="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
       <x:String>System.Activities</x:String>
@@ -125,7 +125,7 @@
       <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DirectorInformation" sap:VirtualizedContainerService.HintSize="1089,14880" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DirectorInformation" sap:VirtualizedContainerService.HintSize="1089,14942" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="MovieInformation" />
       <Variable x:TypeArguments="sd:DataTable" Name="releasesDataTable">
@@ -195,13 +195,13 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="1047,596" sap2010:WorkflowViewState.IdRef="Sequence_36">
+    <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="1047,595" sap2010:WorkflowViewState.IdRef="Sequence_36">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open https://www.boxofficemojo.com/month/september/2022/?grossesOption=totalGrosses" sap:VirtualizedContainerService.HintSize="504,474" sap2010:WorkflowViewState.IdRef="OpenBrowser_1">
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open https://www.boxofficemojo.com/month/september/2022/?grossesOption=totalGrosses" sap:VirtualizedContainerService.HintSize="499,473" sap2010:WorkflowViewState.IdRef="OpenBrowser_1">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -249,27 +249,27 @@
         </ui:OpenBrowser.Url>
       </ui:OpenBrowser>
     </Sequence>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1047,95" sap2010:WorkflowViewState.IdRef="MessageBox_1">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1047,94" sap2010:WorkflowViewState.IdRef="MessageBox_1">
       <ui:MessageBox.Text>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_162">releasesDataTable.Rows[0].ToString()</CSharpValue>
         </InArgument>
       </ui:MessageBox.Text>
     </ui:MessageBox>
-    <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1047,69" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Director&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Release&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Domestic&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Worldwide&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Producer&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Production_x0020_company&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1047,69" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Director&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Release&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Domestic&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Worldwide&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Producer&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Production_x0020_company&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
       <ui:BuildDataTable.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_90">worldwideDataTable</CSharpReference>
         </OutArgument>
       </ui:BuildDataTable.DataTable>
     </ui:BuildDataTable>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1047,4827" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1047,4905" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="593,4696" sap2010:WorkflowViewState.IdRef="Sequence_43">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="589,4775" sap2010:WorkflowViewState.IdRef="Sequence_43">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataRow" Name="worldwideTemp" />
             </Sequence.Variables>
@@ -278,13 +278,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="551,1324" sap2010:WorkflowViewState.IdRef="Sequence_40">
+            <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="547,1323" sap2010:WorkflowViewState.IdRef="Sequence_40">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open https://www.boxofficemojo.com/release/rl2982445825/?ref_=bo_md_table_1" sap:VirtualizedContainerService.HintSize="489,474" sap2010:WorkflowViewState.IdRef="OpenBrowser_2">
+              <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open https://www.boxofficemojo.com/release/rl2982445825/?ref_=bo_md_table_1" sap:VirtualizedContainerService.HintSize="485,473" sap2010:WorkflowViewState.IdRef="OpenBrowser_2">
                 <ui:OpenBrowser.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
@@ -331,7 +331,7 @@
                   </InArgument>
                 </ui:OpenBrowser.Url>
               </ui:OpenBrowser>
-              <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'TheWomanK Chrome_wi'" sap:VirtualizedContainerService.HintSize="489,324" sap2010:WorkflowViewState.IdRef="WindowScope_3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='* - Production &amp;amp; Contact Info | IMDbPro - Google Ch*' /&gt;">
+              <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'TheWomanK Chrome_wi'" sap:VirtualizedContainerService.HintSize="485,324" sap2010:WorkflowViewState.IdRef="WindowScope_3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='* - Production &amp;amp; Contact Info | IMDbPro - Google Ch*' /&gt;">
                 <ui:WindowScope.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
@@ -364,7 +364,7 @@
                   </ActivityAction>
                 </ui:WindowScope.Body>
               </ui:WindowScope>
-              <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'TheWomanK Page'" sap:VirtualizedContainerService.HintSize="489,324" sap2010:WorkflowViewState.IdRef="WindowScope_4" Selector="&lt;html app='chrome.exe' title='* - Production &amp;amp; Contact Info | IMDbPro' /&gt;">
+              <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'TheWomanK Page'" sap:VirtualizedContainerService.HintSize="485,324" sap2010:WorkflowViewState.IdRef="WindowScope_4" Selector="&lt;html app='chrome.exe' title='* - Production &amp;amp; Contact Info | IMDbPro' /&gt;">
                 <ui:WindowScope.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
@@ -393,7 +393,7 @@
                 </ui:WindowScope.Body>
               </ui:WindowScope>
             </Sequence>
-            <Assign sap:VirtualizedContainerService.HintSize="551,70" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign sap:VirtualizedContainerService.HintSize="547,70" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:String[]">
                   <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_78">linkArray</CSharpReference>
@@ -405,7 +405,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="551,70" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <Assign sap:VirtualizedContainerService.HintSize="547,70" sap2010:WorkflowViewState.IdRef="Assign_7">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_82">IMDBLink</CSharpReference>
@@ -417,13 +417,13 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="551,948" sap2010:WorkflowViewState.IdRef="Sequence_42">
+            <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="547,907" sap2010:WorkflowViewState.IdRef="Sequence_42">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open https://www.imdb.com/title/tt15474916/" sap:VirtualizedContainerService.HintSize="467,826" sap2010:WorkflowViewState.IdRef="OpenBrowser_3">
+              <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open https://www.imdb.com/title/tt15474916/" sap:VirtualizedContainerService.HintSize="467,785" sap2010:WorkflowViewState.IdRef="OpenBrowser_3">
                 <ui:OpenBrowser.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
@@ -447,21 +447,24 @@
                           </ui:Target>
                         </ui:Click.Target>
                       </ui:Click>
-                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'A  /name/nm6475689/?ref...'" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="GetValue_8">
-                        <ui:GetValue.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0b00f2c6-a6d9-40df-bbfe-7feb4b7b279a" InformativeScreenshot="471614e28c9f5b659e986ccc0a33f4da" Selector="&lt;webctrl parentid='fullcredits_content' tag='A' /&gt;" WaitForReady="COMPLETE">
+                      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'A  /name/nm6475689/?ref...'" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="GetFullText_2">
+                        <ui:GetFullText.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b57e5ab-8599-4da4-a2f6-f54cae5d8783" InformativeScreenshot="471614e28c9f5b659e986ccc0a33f4da" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;">
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
                           </ui:Target>
-                        </ui:GetValue.Target>
-                        <ui:GetValue.Value>
+                        </ui:GetFullText.Target>
+                        <ui:GetFullText.Text>
                           <OutArgument x:TypeArguments="x:String">
-                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_101">Director</CSharpReference>
+                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_105">Director</CSharpReference>
                           </OutArgument>
-                        </ui:GetValue.Value>
-                      </ui:GetValue>
-                      <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DisplayName="Extract Structured Data 'DIV  fullcredits_content'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Producer' attr='text'&gt;&lt;webctrl tag='table' idx='4' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="100" SimulateClick="True">
+                        </ui:GetFullText.Text>
+                      </ui:GetFullText>
+                      <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DisplayName="Extract Structured Data 'DIV  fullcredits_content'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Producer' attr='text'&gt;&lt;webctrl tag='table' idx='4' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="0" SimulateClick="True">
                         <ui:ExtractData.DataTable>
                           <InOutArgument x:TypeArguments="sd:DataTable">
                             <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_81">producerDataTable</CSharpReference>
@@ -497,7 +500,7 @@
                 </ui:OpenBrowser.Url>
               </ui:OpenBrowser>
             </Sequence>
-            <Assign sap:VirtualizedContainerService.HintSize="551,70" sap2010:WorkflowViewState.IdRef="Assign_8">
+            <Assign sap:VirtualizedContainerService.HintSize="547,70" sap2010:WorkflowViewState.IdRef="Assign_8">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_84">producerRow</CSharpReference>
@@ -509,7 +512,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="551,720" sap2010:WorkflowViewState.IdRef="OpenBrowser_4">
+            <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="547,719" sap2010:WorkflowViewState.IdRef="OpenBrowser_4">
               <ui:OpenBrowser.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -572,7 +575,7 @@
                 </InArgument>
               </ui:OpenBrowser.Url>
             </ui:OpenBrowser>
-            <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="551,90" sap2010:WorkflowViewState.IdRef="OutputDataTable_1">
+            <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="547,89" sap2010:WorkflowViewState.IdRef="OutputDataTable_1">
               <ui:OutputDataTable.DataTable>
                 <InArgument x:TypeArguments="sd:DataTable">
                   <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_149">studioDataTable</CSharpValue>
@@ -584,7 +587,7 @@
                 </OutArgument>
               </ui:OutputDataTable.Text>
             </ui:OutputDataTable>
-            <Assign sap:VirtualizedContainerService.HintSize="551,70" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign sap:VirtualizedContainerService.HintSize="547,70" sap2010:WorkflowViewState.IdRef="Assign_9">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_87">studio</CSharpReference>
@@ -596,14 +599,14 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ClearDataTable DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="551,90" sap2010:WorkflowViewState.IdRef="ClearDataTable_3">
+            <ui:ClearDataTable DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="547,89" sap2010:WorkflowViewState.IdRef="ClearDataTable_3">
               <ui:ClearDataTable.DataTable>
                 <InOutArgument x:TypeArguments="sd:DataTable">
                   <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_88">studioDataTable</CSharpReference>
                 </InOutArgument>
               </ui:ClearDataTable.DataTable>
             </ui:ClearDataTable>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="551,296" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="547,296" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -669,7 +672,7 @@
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
                     <ui:AssignOperation.To>
                       <OutArgument x:TypeArguments="x:Object">
-                        <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_96">worldwideTemp["Director"]</CSharpReference>
+                        <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_106">worldwideTemp["Producer"]</CSharpReference>
                       </OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
@@ -693,7 +696,7 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="551,198" sap2010:WorkflowViewState.IdRef="AddDataRow_5">
+            <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="547,195" sap2010:WorkflowViewState.IdRef="AddDataRow_5">
               <ui:AddDataRow.DataRow>
                 <InArgument x:TypeArguments="sd:DataRow">
                   <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_159">worldwideTemp</CSharpValue>
@@ -705,14 +708,21 @@
                 </InOutArgument>
               </ui:AddDataRow.DataTable>
             </ui:AddDataRow>
-            <ui:ClearDataTable DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="551,90" sap2010:WorkflowViewState.IdRef="ClearDataTable_4">
+            <ui:ClearDataTable DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="547,89" sap2010:WorkflowViewState.IdRef="ClearDataTable_4">
               <ui:ClearDataTable.DataTable>
                 <InOutArgument x:TypeArguments="sd:DataTable">
                   <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_99">ExtractDataTable</CSharpReference>
                 </InOutArgument>
               </ui:ClearDataTable.DataTable>
             </ui:ClearDataTable>
-            <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="551,90" sap2010:WorkflowViewState.IdRef="OutputDataTable_2">
+            <ui:ClearDataTable DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="547,89" sap2010:WorkflowViewState.IdRef="ClearDataTable_5">
+              <ui:ClearDataTable.DataTable>
+                <InOutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_107">producerDataTable</CSharpReference>
+                </InOutArgument>
+              </ui:ClearDataTable.DataTable>
+            </ui:ClearDataTable>
+            <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="547,89" sap2010:WorkflowViewState.IdRef="OutputDataTable_2">
               <ui:OutputDataTable.DataTable>
                 <InArgument x:TypeArguments="sd:DataTable">
                   <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_165">worldwideDataTable</CSharpValue>
@@ -733,38 +743,38 @@
         </InArgument>
       </ui:ForEachRow.DataTable>
     </ui:ForEachRow>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1047,894" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1047,887" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,798" sap2010:WorkflowViewState.IdRef="Sequence_51">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,791" sap2010:WorkflowViewState.IdRef="Sequence_51">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="510,708" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" WorkbookPath="output-spreadsheets\\movie-information.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="510,701" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" WorkbookPath="output-spreadsheets\\movie-information.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,426" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,423" sap2010:WorkflowViewState.IdRef="Sequence_50">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="False" sap:VirtualizedContainerService.HintSize="434,126" sap2010:WorkflowViewState.IdRef="ClearRangeX_2">
+                    <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="False" sap:VirtualizedContainerService.HintSize="434,125" sap2010:WorkflowViewState.IdRef="ClearRangeX_2">
                       <ueab:ClearRangeX.TargetRange>
                         <InArgument x:TypeArguments="ue:IReadWriteRangeRef">
                           <CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_169">Excel.Sheet["Sheet1"]</CSharpValue>
                         </InArgument>
                       </ueab:ClearRangeX.TargetRange>
                     </ueab:ClearRangeX>
-                    <ueab:WriteRangeX DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,170" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False">
+                    <ueab:WriteRangeX DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False">
                       <ueab:WriteRangeX.Destination>
                         <InArgument x:TypeArguments="ue:IReadWriteRangeRef">
                           <CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_170">Excel.Sheet["Sheet1"]</CSharpValue>
@@ -807,7 +817,7 @@
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
-    <ui:RemoveDuplicateRows DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="1047,90" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1">
+    <ui:RemoveDuplicateRows DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="1047,89" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1">
       <ui:RemoveDuplicateRows.DataTable>
         <InArgument x:TypeArguments="sd:DataTable">
           <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">MovieInformation</CSharpValue>
@@ -840,13 +850,13 @@
         </OutArgument>
       </ui:BuildDataTable.DataTable>
     </ui:BuildDataTable>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1047,5883" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1047,5877" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1013,5752" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1013,5747" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="NewDT" />
             </Sequence.Variables>
@@ -855,13 +865,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use IMDb" sap:VirtualizedContainerService.HintSize="971,4671" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="6cfb1f34-f36c-42b2-b7c4-aa674bdc79ba" Version="V1">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use IMDb" sap:VirtualizedContainerService.HintSize="971,4666" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="6cfb1f34-f36c-42b2-b7c4-aa674bdc79ba" Version="V1">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="937,4444" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="937,4440" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="CurrentURL" />
                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Children">
@@ -887,7 +897,7 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Enter Director Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="895,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6cfb1f34-f36c-42b2-b7c4-aa674bdc79ba" Version="V1">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Enter Director Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="895,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6cfb1f34-f36c-42b2-b7c4-aa674bdc79ba" Version="V1">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.imdb.com/" DesignTimeRectangle="199, 92, 511, 31" ElementType="InputBox" FriendlyName="'INPUT suggestion-search'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="13a3f675-3ab6-4818-a895-75ba4edbc2a3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAgMAAAAjCAYAAAAJ6AlIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVtSURBVHhe7dzfSxtZGMbx/g3+r0MIhSCDbBbC0simFy0Oy1A2UlzMYmTJYm4ULSp0vAglsFnYSCNFiiBDCUKQZ885M4kxjq52pabM9wMvMj+Tyc37zJwzPltYWBBFURRFUfktwgBFURRF5byeydjY2LB/AABADhEGAADIOcIAAAA5RxgAACDnCAMAAOQcYQAAgJwjDAAAkHOEAQAAco4wAABAzn3XYWDwrq7WhzhdmhNxV63VPQ3SRQAA5t2DwsDoZFvBUlGe57kqLtXUfMJm3HnjqbJ1mi79l1O1K9P7J8teIVB0ka66Jtb2sr3OUJ10jTrh5Nrd9ftVhTs9xZfpduu0rcr0MQAAzLn7h4GLSEHBU/XPgUau+Y0Uvw9V8spqnrg9vrlHCQOmqVd3MgLNSVNl1/Rnw0CggzhWbOsk0lrFhKMXbZ2OAwFhAADwnbl/GHCNMFQ0fRds7p73XnryN/rpsjE6U2+/rcbmtrofbzbZ+GNX25t1NXe6GkxvvjhV96ivs3igg82GokmPN6HjOFJ7vaH2fk9no3S1MQ4DyTlvbr8uOwxUl6vylrfNlVzXfVtSyWwr3wgDM43+sqe1RU+v3qVnGIcB+zvsNFU3v0Pv861fCgCAJ3f/MHC+rapXUrB7ZtrzLYYdhaYxll/XVV8NVCmaZjtpvkN1Vn0V/ZrqW201VyoqFqpqT3qzbaKmAftFlV/W1OralVfHhKvmnK/L8hYDRefuCBcGSr4v/6fAfF6omm/u5F/u3WjsiewwEB7aJx4zTzfcUxCz7v3MXX5WGDD6G768lYPkdxlfx1JFgf3O9jrNcv0DgQAAMJ8eNGfg7DCUX/BUXKwq2DxQ/3y6wY0U/WKa81vXxRP/NMz+pnnapwkXPW2vNtVJG7nd/2Bl6qmCa6IVtT4li445vlQIdDBMl80xnTem0f7Wc0suDISRiQyp46Z8+xg/cw5Adhio7cbJU4Cp7x3v1uT90NRg9pH/LWHgdKsir9I2Z7QLN6+jv2FCzK0hBQCAp/WgMOCMYvX3mwqWS+aO1zTz8EBnbuigq7oJCrXfI0VH42qoZhrj5O7fNPPhSW+yvfGzuZN/k7bW2cZruCY720QvhoqHSQi5MWcgbcRXnzctOwy4ZTs/YDKRMJk46OYRfHUYmNnnrzWVMo4DAGAePDwMTBl93lNQGo+XdxR6RVVW7BDBdLXUdd08VrRiAkQlUHPnAWFgvD3Do4WB6QAwHQw+1K83/7uGCcahJSsMZK0DAGBO3DsM9P+oyP81SsbFJ5KhAW/VPmLvac0Eg+DwlrFx1xCvP8K3zfyuMOAe1//YSu64U6NPXUXHru0+Yhgw5z0M3NBAe3rIYLb5Z4WBdALh5I2ErMZ/ZI4rrZlfCACA+XP/JwPH9lW7koL9qwmEo5OWqgUTAN4na9zY+GKoKO2LiiOtrbQ1sJtdkyyr8U+y7+hjWzUTHu4KAzrfU61QUniUnnA0UMs0cDvObz1mGBi/OulNTya8Kwxc2iGP214tNOHAvoJpl+13fjEzlwIAgDnyoGGC+O/2tX865BV8vdrqX03guzxT9NbOnvdUfG72K/oKdsfNd6j+ZtVtc/+wZylUfaU0Mwt/JgwYw25DlefmGHO+oh2GWO9OPu9Rw4BhJxJee80wMwyk127reVm19SidM5Fy3+GV1taT38Fd63JT/cmPBADAfPm6OQN2Et+X5A4/k71rjoczQwqp0dUEwIcYfYn1FYc9ra+8VgAAvqX/NYEQAAB8/wgDAADkHGEAAICcIwwAAJBzhAEAAHKOMAAAQM4RBgAAyDnCAAAAOUcYAAAg5wgDAADkHGEAAICce7awsCCKoiiKovJaC/oXN4oiOcCIUdAAAAAASUVORK5CYII=" InformativeScreenshot="0328aa9b47fdf22e1cc7aa8cc2b3d642.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='IMDb: Ratings, Reviews, and Where to Watch the Best Movies &amp;amp; TV Shows' /&gt;" SearchSteps="FuzzySelector, Image" />
                       </uix:NTypeInto.Target>
@@ -897,8 +907,8 @@
                         </InArgument>
                       </uix:NTypeInto.Text>
                     </uix:NTypeInto>
-                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DelayAfter="8" DelayBefore="8" DisplayName="Select Director From Dropdown" sap:VirtualizedContainerService.HintSize="895,165" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="6cfb1f34-f36c-42b2-b7c4-aa674bdc79ba" Shortcuts="[d(hk)][k(down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1" />
-                    <ui:ClearDataTable DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="895,90" sap2010:WorkflowViewState.IdRef="ClearDataTable_1">
+                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DelayAfter="8" DelayBefore="8" DisplayName="Select Director From Dropdown" sap:VirtualizedContainerService.HintSize="895,163" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="6cfb1f34-f36c-42b2-b7c4-aa674bdc79ba" Shortcuts="[d(hk)][k(down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1" />
+                    <ui:ClearDataTable DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="895,89" sap2010:WorkflowViewState.IdRef="ClearDataTable_1">
                       <ui:ClearDataTable.DataTable>
                         <InOutArgument x:TypeArguments="sd:DataTable">
                           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">releasesDataTable</CSharpReference>
