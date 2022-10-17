@@ -14,6 +14,6 @@ Our GitHub repository for this project can be viewed [here](https://github.com/I
 # How To Run
 
 1. Open up the `DirectorInformation.xaml` file in UI Path.
-2. Click `Debug File` at the top left-hand corner of the UI Path window.
+2. Click the arrow by `Debug File` at the top left-hand corner of the UI Path window and select `Run`.
 3. Wait for the process to finish.
 4. Once the process is completed, the two spreadsheets are available in the `output-spreadsheets` folder. The first spreadsheet, `movie-information`, contains the title, the domestic and worldwide gross, studio, director and producer details for each movie at the box office for the last month. The second spreadsheet, `director-gross-information` contains the top five highest-grossing films for each director found in the first spreadsheet, sorted by highest worldwide gross.
