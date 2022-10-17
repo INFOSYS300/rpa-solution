@@ -1,7 +1,7 @@
 {
   "name": "MovieDatabaseProcess",
   "description": "",
-  "main": "Main.xaml",
+  "main": "DirectorInformation.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.3]",
@@ -40,13 +40,13 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": false
+    "modernBehavior": true
   },
   "expressionLanguage": "CSharp",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "580f92de-60b5-4e06-9783-8ba97947c789",
+      "filePath": "DirectorInformation.xaml",
+      "uniqueId": "49a675ed-e7af-40e2-a763-0e3a87a55c9d",
       "input": [],
       "output": []
     }
