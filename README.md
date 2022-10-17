@@ -1,6 +1,6 @@
 # Project Overview
 
-This project aims to automate the analysis of movies to aid in the risk assessment of future movie projects. The RPA-based solution scans the box office movies from the previous month and provides their domestic and worldwide grosses alongside studio, director and producer information. The solution also provides information on the top five highest-grossing movies for each director who had a film in the box office list.
+This project aims to automate the analysis of movies to aid in the risk assessment of future movie projects. The RPA-based solution scans the box office movies from the previous month and provides their domestic and worldwide grosses alongside studio, director and producer information. The solution also provides information on the highest-grossing movies for each director who had a film in the box office list.
 
 # Prerequisites
 
